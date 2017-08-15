@@ -11,9 +11,8 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 注意：
 当遇见右括号时，先检查Stack是否为空，为空则返回错误；
 遍历结束后，最后检查Stack是否为空，不为空返回错误。
-
-思考：
 */
+
 public class Solution {
     /**
      * @param s A string
