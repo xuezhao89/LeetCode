@@ -14,13 +14,11 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 For example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 
 思路：
-1.如果root为null或root为A、B其中一个节点，则通过返回该root标记该子树发现了某个目标结点；
-2.分治左右子树，查看左右子树是否有目标结点，没有为null；
-3.如果分治结果都不为空，说明左右子树都有目标结点，则公共祖先就是root本身；
-3.如果左右子树其中一个不为空，则继续向上标记为该目标节点。
+如果root为null或root为A、B其中一个节点，则通过返回该root标记该子树发现了某个目标结点；
+分治左右子树，查看左右子树是否有目标结点，没有为null；
+如果分治结果都不为空，说明左右子树都有目标结点，则公共祖先就是root本身；
+如果左右子树其中一个不为空，则继续向上标记为该目标节点。
 */
-
-
 
 /**
  * Definition of TreeNode:
