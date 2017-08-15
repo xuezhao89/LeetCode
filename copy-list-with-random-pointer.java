@@ -1,5 +1,7 @@
 ﻿/*
 题目：
+A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
 
 思路：
 建新链表，在原链表遍历每一个原节点，复制原链表每个节点的值到新建节点里；
