@@ -1,4 +1,22 @@
-﻿public class Solution {
+题目：
+Given a digit string, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below.
+
+Input:Digit string "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+
+Note:
+Although the above answer is in lexicographical order, your answer could be in any order you want.
+    
+思路：
+创建一个HashMap保存号码和字母的映射关系，然后对于号码的每一位找出其对应的字符串，定义为candidate；遍历candiate的每一个字母，再进行DFS，找出candidate每一个字母和号码剩下数字对应的字符串里字母组合的所有可能性。
+以“23”为例：第一个数字“2”，其对应的字母有“abc”，那么此时只需要知道“3”可能代表的字符串有哪些，然后将"abc"的每一个字母与“def”的每一个字母一一组合起来，便可得到全部的解。
+
+注意：
+用StringBuilder构建临时字符串；
+当临时字符串为空时，不用将其加入结果列表中。
+
+public class Solution {
     List<String> res = new ArrayList<String>();
 
     public List<String> letterCombinations(String digits) {
