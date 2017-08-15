@@ -1,5 +1,4 @@
 ﻿/*
-
 题目：
 You are given an n x n 2D matrix representing an image.
 Rotate the image by 90 degrees (clockwise).
@@ -13,8 +12,6 @@ Could you do this in-place?
 注意：
 转换至转置矩阵的同时可以反转转置后的当前行，不需要完全转换到转置矩阵再反转每一行。
 */
-
-
 
 public class Solution {
     public void rotate(int[][] matrix) {
