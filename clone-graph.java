@@ -1,7 +1,6 @@
 /*
-ÌâÄ¿£º
+é¢˜ç›®ï¼š
 Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.
-
 
 OJ's undirected graph serialization:
 Nodes are labeled uniquely.
@@ -23,11 +22,11 @@ Visually, the graph looks like the following:
          / \
          \_/
 
-Ë¼Â·£º½¨HashMap±£´æĞÂ¾É½ÚµãµÄÓ³Éä¹ØÏµ£¬½¨Queue±£´æ¾É½ÚµãµÄneighbors£»
-½«¾É½Úµãnode¸´ÖÆºó£¬°Ñnode·ÅÈëqueueÀï£»½ÓÏÂÀ´°ÑnodeµÄÁÚ¾ÓÃÇ¸´ÖÆÉú³ÉĞÂ½Úµãºó´æÈëmap¡£
-¸´ÖÆÁÚ¾ÓÊ±¿ÉÄÜ»áÖØ¸´¸´ÖÆ£¬Ã¿±éÀú¹ıÒ»¸ö¾É½Úµã£¬¾ÍĞÂ½¨Ò»¸öĞÂ½Úµã²¢Ó³Éäµ½mapÀï£»µ±·¢ÏÖÒ»¸ö¾É½ÚµãÔÚmapÀïÃ»³öÏÖ¹ı£¬ËµÃ÷¸Ã½ÚµãÎ´±»¸´ÖÆ£»Èç¹ûmapÀïÒÑÓĞÕâ¸ö¾É½Úµã£¬ËµÃ÷´ËÇ°ÒÑ´¦Àí¹ı£¬µ«ÈÔĞè°Ñ¸Ã½ÚµãµÄ¸´ÖÆ½Úµã·ÅÈë¸´ÖÆºóµÄ¸¸½ÚµãµÄÁÚ¾ÓÖĞ¡£
+æ€è·¯ï¼šå»ºHashMapä¿å­˜æ–°æ—§èŠ‚ç‚¹çš„æ˜ å°„å…³ç³»ï¼Œå»ºQueueä¿å­˜æ—§èŠ‚ç‚¹çš„neighborsï¼›
+å°†æ—§èŠ‚ç‚¹nodeå¤åˆ¶åï¼ŒæŠŠnodeæ”¾å…¥queueé‡Œï¼›æ¥ä¸‹æ¥æŠŠnodeçš„é‚»å±…ä»¬å¤åˆ¶ç”Ÿæˆæ–°èŠ‚ç‚¹åå­˜å…¥mapã€‚
+å¤åˆ¶é‚»å±…æ—¶å¯èƒ½ä¼šé‡å¤å¤åˆ¶ï¼Œæ¯éå†è¿‡ä¸€ä¸ªæ—§èŠ‚ç‚¹ï¼Œå°±æ–°å»ºä¸€ä¸ªæ–°èŠ‚ç‚¹å¹¶æ˜ å°„åˆ°mapé‡Œï¼›å½“å‘ç°ä¸€ä¸ªæ—§èŠ‚ç‚¹åœ¨mapé‡Œæ²¡å‡ºç°è¿‡ï¼Œè¯´æ˜è¯¥èŠ‚ç‚¹æœªè¢«å¤åˆ¶ï¼›å¦‚æœmapé‡Œå·²æœ‰è¿™ä¸ªæ—§èŠ‚ç‚¹ï¼Œè¯´æ˜æ­¤å‰å·²å¤„ç†è¿‡ï¼Œä½†ä»éœ€æŠŠè¯¥èŠ‚ç‚¹çš„å¤åˆ¶èŠ‚ç‚¹æ”¾å…¥å¤åˆ¶åçš„çˆ¶èŠ‚ç‚¹çš„é‚»å±…ä¸­ã€‚
 
-×¢Òâ£ºHashMapÔÚÕâÀï³äµ±ÁËboolean[] visited£¬Ò²¿ÉÒÔÈ¥»·¡£
+æ³¨æ„ï¼šHashMapåœ¨è¿™é‡Œå……å½“äº†boolean[] visitedï¼Œä¹Ÿå¯ä»¥å»ç¯ã€‚
 */
 
 /**
@@ -43,7 +42,7 @@ public class Solution {
         if (node == null) {
             return null;
         }
-        // queueÓÃÀ´±£´æ¾ÉÍ¼nodeµÄÁÚ¾Ó
+        // queueç”¨æ¥ä¿å­˜æ—§å›¾nodeçš„é‚»å±…
         Queue<UndirectedGraphNode> queue = new LinkedList<>();
         queue.offer(node);
         Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
@@ -52,18 +51,18 @@ public class Solution {
         
         while (!queue.isEmpty()) {
             UndirectedGraphNode cur = queue.poll();
-            // °Ñ¾É½ÚµãcurµÄÁÚ¾Ó½Úµã¸´ÖÆºó£¬Ìí¼Óµ½cur¸´ÖÆºóµÄĞÂ½ÚµãµÄneighborsÀï
+            // æŠŠæ—§èŠ‚ç‚¹curçš„é‚»å±…èŠ‚ç‚¹å¤åˆ¶åï¼Œæ·»åŠ åˆ°curå¤åˆ¶åçš„æ–°èŠ‚ç‚¹çš„neighborsé‡Œ
             for (UndirectedGraphNode neighbor : cur.neighbors) {
-                // ÅĞ¶ÏÊÇ·ñ±éÀú¹ıµ±Ç°ÁÚ¾Ó½Úµã£¬Ã»ÓĞÔòËµÃ÷»¹Ã»Éú³Éµ±Ç°ÁÚ¾Ó½ÚµãµÄĞÂ½Úµã
+                // åˆ¤æ–­æ˜¯å¦éå†è¿‡å½“å‰é‚»å±…èŠ‚ç‚¹ï¼Œæ²¡æœ‰åˆ™è¯´æ˜è¿˜æ²¡ç”Ÿæˆå½“å‰é‚»å±…èŠ‚ç‚¹çš„æ–°èŠ‚ç‚¹
                 if (!map.containsKey(neighbor)) {
-                    // ¸´ÖÆ³ö¸ÃÁÚ¾Ó½ÚµãµÄĞÂ½Úµã
+                    // å¤åˆ¶å‡ºè¯¥é‚»å±…èŠ‚ç‚¹çš„æ–°èŠ‚ç‚¹
                     UndirectedGraphNode n = new UndirectedGraphNode(neighbor.label);
-                    // ±£´æ¾ÉÁÚ¾ÓºÍĞÂÁÚ¾ÓµÄÓ³Éä¹ØÏµ
+                    // ä¿å­˜æ—§é‚»å±…å’Œæ–°é‚»å±…çš„æ˜ å°„å…³ç³»
                     map.put(neighbor, n);
-                    // °Ñ¸Õ±»±éÀúµÄ¾ÉÁÚ¾Ó½Úµã±£´æµ½queueÀï
+                    // æŠŠåˆšè¢«éå†çš„æ—§é‚»å±…èŠ‚ç‚¹ä¿å­˜åˆ°queueé‡Œ
                     queue.offer(neighbor);
                 }
-                // °ÑĞÂÉú³ÉµÄÁÚ¾Ó½ÚµãÌí¼Óµ½cur¸´ÖÆºó½ÚµãµÄneighborsÀï
+                // æŠŠæ–°ç”Ÿæˆçš„é‚»å±…èŠ‚ç‚¹æ·»åŠ åˆ°curå¤åˆ¶åèŠ‚ç‚¹çš„neighborsé‡Œ
                 map.get(cur).neighbors.add(map.get(neighbor));
             }
         }
