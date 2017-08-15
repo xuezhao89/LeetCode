@@ -1,3 +1,4 @@
+/*
 题目：
 Given a digit string, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below.
@@ -15,6 +16,7 @@ Although the above answer is in lexicographical order, your answer could be in a
 注意：
 用StringBuilder构建临时字符串；
 当临时字符串为空时，不用将其加入结果列表中。
+*/
 
 public class Solution {
     List<String> res = new ArrayList<String>();
