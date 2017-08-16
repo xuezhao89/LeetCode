@@ -1,9 +1,7 @@
 /*
-ÌâÄ¿£º
+é¢˜ç›®ï¼š
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
-
-According to the definition of LCA on Wikipedia: ¡°The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).¡±
-
+According to the definition of LCA on Wikipedia: â€œThe lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).â€
         _______6______
        /              \
     ___2__          ___8__
@@ -13,8 +11,8 @@ According to the definition of LCA on Wikipedia: ¡°The lowest common ancestor is
          3   5
 For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
 
-Ë¼Â·£º
-BST¹«¹²×æÏÈµÄÖµÒ»¶¨´óÓÚ½ÏĞ¡µÄ½Úµã£¬Ğ¡ÓÚ½Ï´óµÄ½Úµã¡£ÔÚ±éÀúÊ÷µÄÊ±ºò£¬Èç¹ûµ±Ç°½áµã´óÓÚÁ½¸ö½Úµã£¬ÔòÔÚµ±Ç°½áµãµÄ×ó×ÓÊ÷ÀïÕÒ£»Èç¹ûµ±Ç°½áµãĞ¡ÓÚÁ½¸ö½Úµã£¬ÔòÔÚµ±Ç°½ÚµãµÄÓÒ×ÓÊ÷ÀïÕÒ¡£
+æ€è·¯ï¼š
+BSTå…¬å…±ç¥–å…ˆçš„å€¼ä¸€å®šå¤§äºè¾ƒå°çš„èŠ‚ç‚¹ï¼Œå°äºè¾ƒå¤§çš„èŠ‚ç‚¹ã€‚åœ¨éå†æ ‘çš„æ—¶å€™ï¼Œå¦‚æœå½“å‰ç»“ç‚¹å¤§äºä¸¤ä¸ªèŠ‚ç‚¹ï¼Œåˆ™åœ¨å½“å‰ç»“ç‚¹çš„å·¦å­æ ‘é‡Œæ‰¾ï¼›å¦‚æœå½“å‰ç»“ç‚¹å°äºä¸¤ä¸ªèŠ‚ç‚¹ï¼Œåˆ™åœ¨å½“å‰èŠ‚ç‚¹çš„å³å­æ ‘é‡Œæ‰¾ã€‚
 */
 
 /**
