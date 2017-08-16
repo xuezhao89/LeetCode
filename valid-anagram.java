@@ -1,22 +1,19 @@
 /*
-ÌâÄ¿£º
+é¢˜ç›®ï¼š
 Given two strings s and t, write a function to determine if t is an anagram of s.
-
 For example,
 s = "anagram", t = "nagaram", return true.
 s = "rat", t = "car", return false.
-
 Note:
 You may assume the string contains only lowercase alphabets.
-
 Follow up:
 What if the inputs contain unicode characters? How would you adapt your solution to such case?
 
-Ë¼Â·£º
-½¨HashMap±£´æsÀïÃ¿¸ö×ÖÄ¸ºÍ³öÏÖ´ÎÊı£¬ÔÙ±éÀútµÄÃ¿Ò»¸ö×ÖÄ¸£¬Èç¹ûtÀï³öÏÖmapÀïÃ»ÓĞµÄ×ÖÄ¸Ôò·µ»Ø´íÎó£¬·´Ö®Ôò¼õÈ¥ÏàÓ¦³öÏÖ´ÎÊı¡£×îºó±éÀúmapµÄvalues£¬Èç¹ûÓĞ¼ÆÊı²»Îª0Ôò·µ»Ø´íÎó¡£
+æ€è·¯ï¼š
+å»ºHashMapä¿å­˜sé‡Œæ¯ä¸ªå­—æ¯å’Œå‡ºç°æ¬¡æ•°ï¼Œå†éå†tçš„æ¯ä¸€ä¸ªå­—æ¯ï¼Œå¦‚æœté‡Œå‡ºç°mapé‡Œæ²¡æœ‰çš„å­—æ¯åˆ™è¿”å›é”™è¯¯ï¼Œåä¹‹åˆ™å‡å»ç›¸åº”å‡ºç°æ¬¡æ•°ã€‚æœ€åéå†mapçš„valuesï¼Œå¦‚æœæœ‰è®¡æ•°ä¸ä¸º0åˆ™è¿”å›é”™è¯¯ã€‚
 
-×¢Òâ£º
-Ò²¿ÉÒÔÓÃHashTable×ö£¬µ«Ã»±ØÒª¡£
+æ³¨æ„ï¼š
+ä¹Ÿå¯ä»¥ç”¨HashTableåšï¼Œä½†æ²¡å¿…è¦ã€‚
 */
 
 public class Solution {
