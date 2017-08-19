@@ -12,7 +12,7 @@ Output: 0
 In this case, no transaction is done, i.e. max profit = 0.
 
 思路：
-因为只能交易一次，所以遍历整个数组，通过比较当天价格和minPrice更新minPrice，再通过比较（当天价格和minPrice的价格差）与当前maxProfit更新maxProfit。
+因为只能交易一次，遍历整个数组，通过比较当天价格和minPrice更新minPrice，再通过比较（当天价格和minPrice的价格差）与当前maxProfit更新maxProfit。
 */
 
 class Solution {
