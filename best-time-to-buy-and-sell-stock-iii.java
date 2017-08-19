@@ -32,12 +32,12 @@ public class Solution {
         // 计算右半段的最大收益
         right[right.length - 1] = 0;
         int max = prices[prices.length - 1];
-		int profit = 0;
+	int profit = 0;
         for (int i = prices.length - 2; i >= 0; i--) {
             max = Math.max(max, prices[i]);
             right[i] = Math.max(right[i + 1], max - prices[i]);
-			// 找出最大的收益组合
-			profit = Math.max(profit, left[i] + right[i]);
+		// 找出最大的收益组合
+		profit = Math.max(profit, left[i] + right[i]);
         }
         
         return profit;
