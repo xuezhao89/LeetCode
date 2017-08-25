@@ -5,9 +5,10 @@ For example,
 Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
 
 思路：
-把这道题想成是填土，左右两个指针往中间走，取两边短的作为水平线，当前高度低于水平线时即可填土，填土面积是水平线与当前的高度差*宽度（此题为1），填完后继续往中间走，如果下一个是更低点，重复同样的步骤；如果比水平线高，则跳出当前循环，比较新的左右指针，取新的水平线，再重复以上步骤。
+把这道题想象成填土，取left和right中较低的（以left为例）作为水平线smaller，继续移动left指针，如果所到高度小于或等于水平线即可填土，填土面积是水平线与当前的高度差(smaller - height[left])*宽度（此题为1），填土后left指针继续移动，重复以上步骤，直到所到高度高于水平线，这时跳出内循环，再通过比较left和right所在高度更新水平线。
 
-注意：需要定义left，end，smaller，area。
+注意：
+需要定义left，end，smaller表示水平线，area；外层循环限制条件是while (left < right)，里面分析两种情况：if (height[left] < height[right]和else；内层循环限制条件是while (left < right && height[left] <= smaller)和while (left < right && height[right] <= smaller)。
 */
 
 public class Solution {
